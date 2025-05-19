@@ -48,3 +48,74 @@ Client 2:
 Client 3:
 
 ![Client3](client3.jpg)
+
+### Exercise 2.2
+In this exercise, firstly, I modified the port number in the `server.rs` file to `8080` and didn't change the port number in the `client.rs` file 
+(still at port 2000).
+Then, I ran the server with the command:
+
+```bash
+cargo run --bin server
+```
+
+After that, I ran the client with the command:
+
+```bash
+cargo run --bin client
+```
+
+1st Case:
+
+The client will try to connect to the server on port `8080`, but since the server is running on port `2000`, the client will not be able to connect to 
+the server. This is because the client port and the server port must match in order for the client to connect to the server.
+
+Result image:
+
+Server:
+
+![Diff_server](diff_server.jpg)
+
+Client 1:
+
+![Diff_client1](diff_client1.jpg)
+
+Client 2:
+
+![Diff_client2](diff_client2.jpg)
+
+Client 3:
+
+![Diff_client3](diff_client3.jpg)
+
+2nd Case:
+In this case, I modified the port number in the `client.rs` file to `8080` and also changed the port number in the `server.rs` file to 8080.
+Then, I ran the server with the command:
+
+```bash
+cargo run --bin server
+```
+
+After that, I ran the client with the command:
+
+```bash
+cargo run --bin client
+```
+
+The client will be able to connect to the server on port `8080` because both the client and server are running on the same port. This is because 
+the client port and the server port must match in order for the client to connect to the server.
+
+Result image:
+
+Server:
+![Same_server](same_server.jpg)
+
+Client 1:
+
+![Same_client1](same_client1.jpg)
+
+Client 2:
+![Same_client2](same_client2.jpg)
+
+Client 3:
+![Same_client3](same_client3.jpg)
+
