@@ -107,6 +107,7 @@ the client port and the server port must match in order for the client to connec
 Result image:
 
 Server:
+
 ![Same_server](same_server.jpg)
 
 Client 1:
@@ -114,8 +115,10 @@ Client 1:
 ![Same_client1](same_client1.jpg)
 
 Client 2:
+
 ![Same_client2](same_client2.jpg)
 
 Client 3:
+
 ![Same_client3](same_client3.jpg)
 
