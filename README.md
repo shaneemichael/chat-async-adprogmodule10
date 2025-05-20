@@ -122,3 +122,30 @@ Client 3:
 
 ![Same_client3](same_client3.jpg)
 
+### Exercise 2.3
+I enhanced the server's broadcast functionality by updating the handle_connection function to include client address information ({addr:?}) within 
+the message format (bcast_tx.send(format!("{addr:?}: {text:?}"))?;). This modification attaches the sender's socket address details (IP and port 
+combination) to each message, creating a built-in identification system that lets all participants see message origins.
+
+This change allows clients to identify the source of each message, enhancing the chat experience by providing context and clarity.
+it centralizes the formatting responsibility at the distribution point, ensuring all connected clients receive consistently formatted messages 
+without needing to individually process raw message data. This approach preserves the architectural principle where the server acts as the central 
+message coordinator, allowing client applications to remain streamlined with their focus on display rendering and user input processing.
+
+Result image:
+
+Server:
+
+![modif_server](modif_server.jpg)
+
+Client 1:
+
+![modif_client1](modif_client1.jpg)
+
+Client 2:
+
+![modif_client2](modif_client2.jpg)
+
+Client 3:
+
+![modif_client3](modif_client3.jpg)
